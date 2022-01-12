@@ -14,11 +14,14 @@ from PIL import ImageGrab
 # julWerk = [5,7,12,14,21,23,26,30]
 # julThuis = [1,2,6,8,9,13,15,16,19,20,22,25,27,28,29]
 
-#junWerk = [2, 7, 9, 14, 16, 21, 23, 25, 28, 30]
-junThuis = [3, 4, 8, 10, 11, 15, 17, 18, 22, 24, 29]
+# junWerk = [2, 7, 9, 14, 16, 21, 23, 25, 28, 30]
+# junThuis = [3, 4, 8, 10, 11, 15, 17, 18, 22, 24, 29]
 
-toWork = junThuis
-month = "06"
+janWerk = [2, 6, 8, 13, 16]
+janThuis = [1, 3, 7, 9, 10, 14, 15, 20, 21, 22, 23]
+
+toWork = janThuis
+month = "12"
 year = "2021"
 typeInp = "home"  # work or home
 
@@ -106,12 +109,21 @@ def clickAndFill():
         time.sleep(1)
 
         # accept datum
-        pyautogui.moveTo(1640, 380)
+        pyautogui.moveTo(1640, 430)     # HD1080 y= 390  HD1200 y = 430
         singleClick()
         time.sleep(3)
 
     print("Code finished successefully")
 
 
-clickAndFill()
-# test2()
+
+
+
+def main():
+    clickAndFill()
+
+
+if __name__ == "__main__":
+    main()
+
+
